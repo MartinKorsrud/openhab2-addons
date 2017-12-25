@@ -12,7 +12,7 @@ You'll need to provide the account password to the Binding.
 
 ## Discovery
 
-An iCloud account can be added as a Thing and needs to be configured with your ID and password.
+An iCloud account can be added as a Thing and needs to be configured with your AppleID and password.
 The devices registered to this account will then be automatically discovered.
 
 ## Binding Configuration
@@ -31,7 +31,7 @@ You may create multiple account Things for multiple accounts.
 
 ### Device Thing
 
-A device is identified by the device ID provided by Apple.
+A device is identified by the device ID provided by Apple. If you want to use file config, you first have to use Paper UI to configure the Bridge and add the auto discovered Thing. The device ID can be found in the configuration settings of the Thing. When you have found the device ID, you may delete the Bridge and Thing configured in the Paper UI and configure the binding using files only.
 If a device is removed or disconnects from the account the respective openHAB device Thing status will change to `OFFLINE`.
 
 All Things are updated according to the configured refresh time of their shared account Bridge.
@@ -63,7 +63,7 @@ The following channels are available (if supported by the device):
 ```php
 Bridge icloud:account:myaccount [appleId="abc@xyz.tld", password="secure", refreshTimeInMinutes=5]
 {
-    Thing device myiPhone8 "iPhone 8" @ "World" [deviceId="VIRG9FsrvXfE90ewVBA1H5swtwEQePdXVjHq3Si6pdJY2Cjro8QlreHYVGSUzuWV"]
+    Thing device myiPhone8 "iPhone 8" [deviceId="VIRG9FsrvXfE90ewVBA1H5swtwEQePdXVjHq3Si6pdJY2Cjro8QlreHYVGSUzuWV"]
 }
 ```
 
