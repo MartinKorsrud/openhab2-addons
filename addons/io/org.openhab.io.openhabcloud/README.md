@@ -28,7 +28,7 @@ After installing this add-on, you will find configuration options in the Paper U
 
 ![Configuration](doc/cfg.png)
 
-Alternatively, you can configure the settings in the file `conf/services/openhabcloud.cfg`:
+Alternatively, you can configure the settings in the file `/var/lib/openhab2/config/org/openhab/openhabcloud.config`:
 
 ```
 ############################## openHAB Cloud Connector #############################
